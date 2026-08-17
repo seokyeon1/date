@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #fff1f2;
+  --foreground: #4c0519;
+}
+
+.dark {
+  --background: #09090b;
+  --foreground: #fff1f2;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-quicksand), "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
